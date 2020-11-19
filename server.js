@@ -16,7 +16,7 @@ const formRoutes = require('./routes/form');
 const app = express();
 
 //db
-mongoose.connect(process.env.DATABASE,{ 
+mongoose.connect(process.env.PRODUCTION_DATABASE,{ 
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
     useCreateIndex: true, 
