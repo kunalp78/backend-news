@@ -28,9 +28,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(cookieParser());
 //cors
-if(process.env.NODE_ENV === 'development'){
+if(process.env.NODE_ENV == 'development'){
     app.use(cors({ origin: `${process.env.CLIENT_URL}`}));
-}if(process.env.NODE_ENV === 'production'){
+}if(process.env.NODE_ENV == 'production'){
     app.use(cors({origin: `${process.env.PRODUCTION_URL}`}));
 }
 //routes middleware
